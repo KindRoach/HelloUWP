@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloUWP", "HelloUWP\HelloU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaudableLayoutChallenge", "LaudableLayoutChallenge\LaudableLayoutChallenge.csproj", "{E75F074E-4607-4307-BE15-887E5915FE67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegendaryLayoutChallenge", "LegendaryLayoutChallenge\LegendaryLayoutChallenge.csproj", "{B6114528-F713-491D-95B7-DCB8D8C10CE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -53,6 +55,24 @@ Global
 		{E75F074E-4607-4307-BE15-887E5915FE67}.Release|x86.ActiveCfg = Release|x86
 		{E75F074E-4607-4307-BE15-887E5915FE67}.Release|x86.Build.0 = Release|x86
 		{E75F074E-4607-4307-BE15-887E5915FE67}.Release|x86.Deploy.0 = Release|x86
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|ARM.Build.0 = Debug|ARM
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|ARM.Deploy.0 = Debug|ARM
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|x64.ActiveCfg = Debug|x64
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|x64.Build.0 = Debug|x64
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|x64.Deploy.0 = Debug|x64
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|x86.ActiveCfg = Debug|x86
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|x86.Build.0 = Debug|x86
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Debug|x86.Deploy.0 = Debug|x86
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|ARM.ActiveCfg = Release|ARM
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|ARM.Build.0 = Release|ARM
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|ARM.Deploy.0 = Release|ARM
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|x64.ActiveCfg = Release|x64
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|x64.Build.0 = Release|x64
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|x64.Deploy.0 = Release|x64
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|x86.ActiveCfg = Release|x86
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|x86.Build.0 = Release|x86
+		{B6114528-F713-491D-95B7-DCB8D8C10CE4}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
