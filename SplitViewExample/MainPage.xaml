@@ -12,7 +12,6 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
         <SplitView Grid.Row="1" CompactPaneLength="40" OpenPaneLength="200" DisplayMode="CompactOverlay">
             <SplitView.Pane>
                 <StackPanel>
