@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="HamburgerHeaven.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HamburgerHeaven"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel>
+            <Button Name="hamburgerBUtton" Click="hamburgerBUtton_Click" RelativePanel.AlignLeftWithPanel="True" Width="44">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" />
+            </Button>
+            <TextBlock Name="TextBlocktittle" FontSize="20" Margin="10 0 0 0" RelativePanel.RightOf="hamburgerBUtton">Text</TextBlock>
+            <TextBox x:Name="TextBoxSearch" Background="#FFDADADA" Width="120" RelativePanel.LeftOf="searchButton" PlaceholderText="Search"/>
+            <Button Name="searchButton" RelativePanel.AlignRightWithPanel="True">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE094;" />
+            </Button>
+        </RelativePanel>
+
+        <SplitView Name="hamburgerView" Grid.Row="1" 
+                   DisplayMode="CompactOverlay" 
+                   CompactPaneLength="44" 
+                   OpenPaneLength="160">
+            <SplitView.Pane>
+                <ListBox Name="listHamburger" SelectionChanged="listHamburger_SelectionChanged">
+                    <ListBoxItem Name="itemFinancial" Height="44">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon  FontFamily="Segoe MDL2 Assets" Glyph="&#xE10F;"/>
+                            <TextBlock Text="Financial"  Margin="12 0 0 0" FontSize="16"></TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="itemFood" Height="44">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE1CE;" />
+                            <TextBlock Text="Food" Margin="12 0 0 0" FontSize="16"></TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="framHamburger" VerticalContentAlignment="Top"></Frame>
+            </SplitView.Content>
+        </SplitView>
+
+    </Grid>
+</Page>

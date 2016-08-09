@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="StupendousStylesChallenge.MyPages.Schedule"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StupendousStylesChallenge.MyPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///ResoucesDictionary.xaml" ></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="Green" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="ms-appx:///Picture/white-logo.png" Style="{StaticResource LogoStyle}" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="1" Style="{StaticResource TextBlockStyle}" Foreground="White">Pickup :</TextBlock>
+        <CalendarDatePicker Grid.Row="1" Grid.Column="1" Margin="24 0 0 0"></CalendarDatePicker>
+        <TimePicker Grid.Row="2" Grid.Column="1" Margin="24 24 0 0" ClockIdentifier="12HourClock"> </TimePicker>
+
+    </Grid>
+</Page>
