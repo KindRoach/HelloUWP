@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="DataBindExampleNew.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DataBindExampleNew"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="Azure">
+        <TextBox Margin="12" Text="{x:Bind Path=st.Age, Mode=TwoWay}"></TextBox>
+        <TextBox Name="showAgeTextBox" Margin="12"></TextBox>
+        <Button Margin="12" HorizontalAlignment="Stretch" Click="AddAge">Add</Button>
+        <Button Margin="12" HorizontalAlignment="Stretch" Click="ShowAge">Show</Button>
+    </StackPanel>
+</Page>
