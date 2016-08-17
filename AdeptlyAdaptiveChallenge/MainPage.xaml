@@ -8,6 +8,44 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
+        <RelativePanel>
+            <Button Click="OpenPanel" Width="44">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" />
+            </Button>
+            <TextBox PlaceholderText="Search" RelativePanel.LeftOf="searchButton" Width="160"></TextBox>
+            <Button Name="searchButton" RelativePanel.AlignRightWithPanel="True">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE094;" />
+            </Button>
+        </RelativePanel>
+        <SplitView Name="hamburgerView" 
+                   Grid.Row="1" 
+                   DisplayMode="CompactOverlay" 
+                   OpenPaneLength="160" 
+                   CompactPaneLength="44">
+            <SplitView.Pane>
+                <ListBox>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE10F;" />
+                            <TextBlock Margin="12 0 0 0">Financial</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE1CE;" />
+                            <TextBlock Margin="12 0 0 0">Food</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="pageFrame"></Frame>
+            </SplitView.Content>
+        </SplitView>
     </Grid>
 </Page>
