@@ -100,6 +100,9 @@
     </Compile>
     <Compile Include="MyClass\Contect.cs" />
     <Compile Include="MyClass\Icon.cs" />
+    <Compile Include="MyContorls\ContectContorl.xaml.cs">
+      <DependentUpon>ContectContorl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +135,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyContorls\ContectContorl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

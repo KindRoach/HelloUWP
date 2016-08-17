@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:data="using:DataBindingHomework.MyClass">
+    xmlns:data="using:DataBindingHomework.MyClass"
+    xmlns:contorls="using:DataBindingHomework.MyContorls" >
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -39,11 +40,7 @@
         <GridView Name="ContectGrid" Grid.Row="4" Grid.ColumnSpan="2" ItemsSource="{x:Bind mv.Contects}" Margin="12" IsItemClickEnabled="True">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:Contect">
-                    <StackPanel>
-                        <Image Source="{x:Bind Icon}" Width="100" Height="100"></Image>
-                        <TextBlock Text="{x:Bind Name}" TextAlignment="Center"></TextBlock>
-                        <TextBlock Text="{x:Bind Age}" TextAlignment="Center"></TextBlock>
-                    </StackPanel>
+                        <contorls:ContectContorl/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
