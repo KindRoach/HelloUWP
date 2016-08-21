@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AdeptlyAdaptiveChallenge.MyClasses;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +24,12 @@ namespace AdeptlyAdaptiveChallenge.MyPages
     /// </summary>
     public sealed partial class Food : Page
     {
+
+        public ObservableCollection<NewsItem> NewsItems;
         public Food()
         {
             this.InitializeComponent();
+            NewsItems = NewsFactory.GetNewsWithCategory(NewsItem.categoryType.Food);          
         }
     }
 }

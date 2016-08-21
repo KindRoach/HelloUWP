@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdeptlyAdaptiveChallenge.MyPages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,11 +26,25 @@ namespace AdeptlyAdaptiveChallenge
         public MainPage()
         {
             this.InitializeComponent();
+            pageFrame.Navigate(typeof(Food));
         }
 
         private void OpenPanel(object sender, RoutedEventArgs e)
         {
             hamburgerView.IsPaneOpen = !hamburgerView.IsPaneOpen;
         }
+
+        private void ChangePage(object sender, SelectionChangedEventArgs e)
+        {
+            if (FinancialItem.IsSelected)
+            {
+                pageFrame.Navigate(typeof(Financial));
+            }
+            else if(FoodItem.IsSelected)
+            {
+                pageFrame.Navigate(typeof(Food));
+            }
+        }
+
     }
 }

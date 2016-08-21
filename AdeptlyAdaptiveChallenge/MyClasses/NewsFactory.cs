@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,18 @@ namespace AdeptlyAdaptiveChallenge.MyClasses
 {
     public static class NewsFactory
     {
-        private static List<NewsItem> getNewsItems()
+        public static ObservableCollection<NewsItem> GetNewsWithCategory(categoryType category)
+        {
+            var result = new ObservableCollection<NewsItem>();
+
+            List<NewsItem> news = GetNewsItems();
+            var newsWithCategory = news.Where(x => x.Category == category).ToList<NewsItem>();
+            newsWithCategory.ForEach(x => result.Add(x));
+
+            return result;
+        }
+
+        private static List<NewsItem> GetNewsItems()
         {
             var items = new List<NewsItem>();
 

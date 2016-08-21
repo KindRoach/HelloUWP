@@ -28,14 +28,14 @@
                    OpenPaneLength="160" 
                    CompactPaneLength="44">
             <SplitView.Pane>
-                <ListBox>
-                    <ListBoxItem>
+                <ListBox SelectionChanged="ChangePage">
+                    <ListBoxItem Name="FinancialItem">
                         <StackPanel Orientation="Horizontal">
                             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE10F;" />
                             <TextBlock Margin="12 0 0 0">Financial</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem>
+                    <ListBoxItem Name="FoodItem">
                         <StackPanel Orientation="Horizontal">
                             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE1CE;" />
                             <TextBlock Margin="12 0 0 0">Food</TextBlock>
