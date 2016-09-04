@@ -29,7 +29,8 @@ namespace AdeptlyAdaptiveChallenge.MyPages
         public Food()
         {
             this.InitializeComponent();
-            NewsItems = NewsFactory.GetNewsWithCategory(NewsItem.categoryType.Food);          
+            NewsItems = new ObservableCollection<MyClasses.NewsItem>();
+            NewsFactory.GetNewsWithCategory(NewsItem.categoryType.Food, NewsItems);
         }
     }
 }

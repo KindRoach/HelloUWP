@@ -28,7 +28,8 @@ namespace AdeptlyAdaptiveChallenge.MyPages
         public Financial()
         {
             this.InitializeComponent();
-            NewsItems = NewsFactory.GetNewsWithCategory(NewsItem.categoryType.Financial);
+            NewsItems = new ObservableCollection<MyClasses.NewsItem>();
+            NewsFactory.GetNewsWithCategory(NewsItem.categoryType.Financial, NewsItems);
         }
     }
 }

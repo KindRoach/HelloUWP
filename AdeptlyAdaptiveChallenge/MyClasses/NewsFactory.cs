@@ -10,15 +10,11 @@ namespace AdeptlyAdaptiveChallenge.MyClasses
 {
     public static class NewsFactory
     {
-        public static ObservableCollection<NewsItem> GetNewsWithCategory(categoryType category)
+        public static void GetNewsWithCategory(categoryType category, ObservableCollection<NewsItem> news)
         {
-            var result = new ObservableCollection<NewsItem>();
-
-            List<NewsItem> news = GetNewsItems();
-            var newsWithCategory = news.Where(x => x.Category == category).ToList<NewsItem>();
-            newsWithCategory.ForEach(x => result.Add(x));
-
-            return result;
+            news.Clear();
+            var newsWithCategory = GetNewsItems().Where(x => x.Category == category).ToList<NewsItem>();
+            newsWithCategory.ForEach(x => news.Add(x));
         }
 
         private static List<NewsItem> GetNewsItems()
